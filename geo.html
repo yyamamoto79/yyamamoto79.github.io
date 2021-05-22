@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="result"></div>
+        <script type="text/javascript">
+            (function f() {
+                navigator.geolocation.getCurrentPosition(x => {
+                    document.getElementById('result').innerHTML = `${x.coords.latitude}, ${x.coords.longitude}`;
+                },
+                x => {
+                    document.getElementById('result').innerHTML = 'error'
+                })
+            })();
+        </script>
+    </body>
+</html>
