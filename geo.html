@@ -6,7 +6,7 @@
             (function f() {
                 let start = Date.now();
                 navigator.geolocation.getCurrentPosition(x => {
-                    document.getElementById('result').innerHTML = `${x.coords.latitude}, ${x.coords.longitude} ${Date.now() - start} secs`;
+                    document.getElementById('result').innerHTML = `${x.coords.latitude}, ${x.coords.longitude} ${Date.now() - start} msecs`;
                 },
                 x => {
                     document.getElementById('result').innerHTML = 'error'
